@@ -1,6 +1,6 @@
 
 from playwright.sync_api import Page
-from support.common.menu import Menu
+from pom.common.menu import Menu
 
 def test_redirect_to_wordpress(page: Page):
     page.goto("https://ufecanada.org/")

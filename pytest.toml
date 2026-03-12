@@ -1,8 +1,15 @@
 [pytest]
 addopts = [
     "-v"
+    # ,"-k smoke"
     # ,"--headed"
     # ,"--slowmo=200"
+    , "--browser=chromium"
+    , "--browser=webkit"
+    # , "--device=\"iPhone 12\""
+    , "--video=retain-on-failure"
+    , "--screenshot=only-on-failure"
+    #, "--output=reports "
 ]
 console_output_style = "count"
 log_cli= true
