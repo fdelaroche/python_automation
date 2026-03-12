@@ -1,9 +1,12 @@
 [pytest]
 addopts = [
     "-v"
+    # ,"--headed"
+    # ,"--slowmo=200"
 ]
+console_output_style = "count"
 log_cli= true
-log_cli_level = INFO
+log_cli_level = "INFO"
 testpaths = ["tests"]
 markers = [
     "smoke"
