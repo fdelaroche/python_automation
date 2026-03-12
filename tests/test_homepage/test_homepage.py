@@ -21,7 +21,7 @@ def test_a_propos_sub_menu_items(wp_ufe_main_page: Page):
     menu.hover_menu_item("À propos")
     sub_menu_items =  [ "Conseil d’administration", "Partenaires", "Page Youtube", "Nous contacter par e-mail", "Ancien site web (archivé)" ]
 
-    assert (menu.sub_menu_items("À propos") == sub_menu_items)
+    assert(menu.sub_menu_items("À propos") == sub_menu_items)
         
 def test_lettres_d_information_sub_menu_items(wp_ufe_main_page: Page):
     page = wp_ufe_main_page
@@ -39,4 +39,4 @@ def test_postes_utiles_sub_menu_items(wp_ufe_main_page: Page):
     menu.hover_menu_item("Postes Utiles")
     sub_menu_items =  [ "Liens utiles", "Certificats de vie", "Index des recettes", "Quelques bonnes adresses de nos membres" ]
 
-    assert (menu.sub_menu_items("Postes Utiles") == sub_menu_items) 
+    assert(menu.sub_menu_items("Postes Utiles") == sub_menu_items) 
