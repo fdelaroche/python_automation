@@ -9,12 +9,17 @@ class Menu:
 
 # -- Selectors 
     @property
-    def _menu_item_selector(self) -> Locator:
+    def _root_menu_item_selector(self) -> Locator:
         return self._page.locator(".main-header-menu > [id^='menu-item']")
     
+    @property
+    # It is required to select the anchor tag inside the menu item to get the text without a carriage return on WebKit
+    def _menu_item_selector(self) -> Locator:
+        return self._root_menu_item_selector.locator("> a")
+    
     def _sub_menu_item_selector(self, parent_text: str) -> Locator:
-        parent_locator = self._menu_item_selector.filter(has=self._page.get_by_role("button", name=parent_text))
-        return parent_locator.locator("ul li")
+        parent_locator = self._root_menu_item_selector.filter(has=self._page.get_by_role("button", name=parent_text))
+        return parent_locator.locator("ul li a")
 
 # -- Methods
     def has_item(self, text: str) -> bool:

@@ -6,6 +6,7 @@ addopts = [
     # ,"--slowmo=200"
     , "--browser=chromium"
     , "--browser=webkit"
+    , "--browser=firefox"
     # , "--device=\"iPhone 12\""
     , "--video=retain-on-failure"
     , "--screenshot=only-on-failure"
